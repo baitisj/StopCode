@@ -16,10 +16,12 @@ import com.google.gwt.user.client.impl.WindowImplIE.Resources;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.StackLayoutPanel;
@@ -36,10 +38,6 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 	 */
 	private static final String SERVER_ERROR = "An error occurred while "
 			+ "attempting to contact the server. Please check your network " + "connection and try again.";
-
-	/**
-	 * Create a remote service proxy to talk to the server-side Greeting service.
-	 */
 	
 	private static String[] txt = { 
 			Rsrc.INSTANCE.s01().getText(),
@@ -52,17 +50,9 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 			Rsrc.INSTANCE.s08().getText()
 		};
 	
-	private void sizeWidget(Widget w) {
-		int height = Window.getClientHeight();
-		int width = Window.getClientWidth();
-	    final String swidth = new Integer((int)((float)width-80)).toString() + "px";
-	    final String sheight = new Integer((int)((float)height-80)).toString() + "px";
-	    w.setSize(swidth, sheight);
-	}
-	
 	private NaloxoneTutorUI ui = new NaloxoneTutorUI();
 	
-	private VerticalPanel nav = new VerticalPanel();
+	private FlowPanel nav = new FlowPanel();
 	
 	private void select(int idx) {
 		// Change state of navigation panel
@@ -85,10 +75,10 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		nav.setStyleName("gwt-navContainer");
-		RootPanel.get("main").add(ui);
-	    sizeWidget(ui);
-		
+		Window.enableScrolling(false);
+		RootLayoutPanel rp = RootLayoutPanel.get();
+		rp.add(ui);
+
 		for (int i=0; i<8; ++i) {
 			NavItem b = new NavItem(i);
 			b.addClickHandler(this);

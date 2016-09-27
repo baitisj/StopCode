@@ -8,46 +8,56 @@
    display: block;
    padding: 15px 5px;
    border-left: 8px solid #666;
+   border-right: 1px solid #666;
+   border-radius: 5px 0px 0px 5px;
    border-bottom: 1px solid #888;
 }
 .gwt-NavItem-active
 {
-   border-right: none;
+   border-right: 2px solid #fff;
    background-color: #fff;
    border-left: 8px solid #f00;
+   border-radius: 5px 0px 0px 5px;
    border-bottom: 1px solid #888;
+   box-shadow: -5px 5px 5px #666;
    padding: 15px 5px;
+   z-index: 10;
+   position: sticky;
 }
 .gwt-NavItem-todo
 {
-   border-right: none;
+   border-right: 1px solid #888;
    border-bottom: 1px solid #888;
    background-color: #ccf;
    border-left: 8px solid #006699;
+   border-radius: 5px 0px 0px 5px;
    padding: 15px 5px;
 }
 
 .gwt-navContainer {
 	border-top: 1px solid #888;
-	background-color: #ddd;
-	margin: 8px 0;
-	width: 40em;
+	border-radius: 5px 0px 0px 5px;
+	margin: 15% 0% 0% 5%;
+	vertical-align: middle;
 }
 
 .gwt-mainContainer {
-		padding: 2em;
+		padding: 2%;
 		background-color: #fff;
-		border-right: 5px solid #888;
-		border-bottom: 5px solid #888;
 		border: 1px solid #888;
+		border-left: none;
+		border-radius: 5px;
+		box-shadow: -5px 5px 5px #666;
+		margin-right: 5%;
+		margin-bottom: 10px;
+		position: sticky;
+		z-index: 6;
 }
 
-#main {
-	background-color: #f2f2f2;
-	padding: 20px 10px;
-	overflow: auto;
+.gwt-DockPanel {
+	background-color: #ddd;
+	vertical-align: middle;
 }
-
 
 /** Most GWT widgets already have a style name defined */
 
@@ -55,7 +65,6 @@
   color: red;
 }
 
-/** Set ids using widget.getElement().setId("idOfElement") */
-#closeButton {
-  margin: 15px 6px 6px;
+@-ms-viewport{
+  width: device-width;
 }

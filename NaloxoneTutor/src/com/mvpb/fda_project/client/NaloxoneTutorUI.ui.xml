@@ -4,17 +4,25 @@
 	
 	<ui:style>
 	
-	.important {
-		font-weight: bold;
-	}
-
+		.important {
+			font-weight: bold;
+		}
+	
 	</ui:style>
-	<g:DockLayoutPanel unit='EM'>
-		<g:west size='10'>
-			<g:HTMLPanel ui:field="W"/>
+	
+	<g:DockLayoutPanel unit='PCT' styleName="gwt-DockPanel">
+		<g:north size='5'>
+			<g:FlowPanel ui:field="N"/>
+		</g:north>
+		<g:west size='20'>
+			<g:FlowPanel ui:field="W" styleName="gwt-navContainer"/>
 		</g:west>
-		<g:center>
-			<g:HTMLPanel styleName="gwt-mainContainer" ui:field="M"/>
+		<g:center size='80'>
+			<g:FlowPanel ui:field="M" styleName="gwt-mainContainer"/>
 		</g:center>
+		<g:south size='5'>
+			<g:FlowPanel ui:field="S"/>
+		</g:south>
 	</g:DockLayoutPanel>
+	
 </ui:UiBinder> 
