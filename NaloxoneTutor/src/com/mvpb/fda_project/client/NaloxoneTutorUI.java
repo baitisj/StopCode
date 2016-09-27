@@ -10,6 +10,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.ScrollPanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -28,7 +29,7 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 	FlowPanel M;
 	
 	@UiField
-	FlowPanel W;
+	ScrollPanel W;
 	
 	public void setMain(Widget w) {
 		M.clear();
@@ -38,6 +39,10 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 	public void setNav(Widget w) {
 		W.clear();
 		W.add(w);
+	}
+	
+	public void ensureVisible(Widget w) {
+		W.ensureVisible(w);
 	}
 
 	@Override

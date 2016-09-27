@@ -60,7 +60,9 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 			nav.getWidget(i).setStyleName("gwt-NavItem-done");
 		}
 		
-		nav.getWidget(idx).setStyleName("gwt-NavItem-active");
+		Widget wid = nav.getWidget(idx);
+		wid.setStyleName("gwt-NavItem-active");
+		ui.ensureVisible(wid);
 		
 		for (int i=idx+1; i < 8; ++i) {
 			nav.getWidget(i).setStyleName("gwt-NavItem-todo");
