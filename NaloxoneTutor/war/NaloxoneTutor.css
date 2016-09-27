@@ -1,0 +1,61 @@
+/** Add css rules here for your application. */
+
+
+.gwt-NavItem-done
+{
+   text-decoration: none;
+   color: #666;
+   display: block;
+   padding: 15px 5px;
+   border-left: 8px solid #666;
+   border-bottom: 1px solid #888;
+}
+.gwt-NavItem-active
+{
+   border-right: none;
+   background-color: #fff;
+   border-left: 8px solid #f00;
+   border-bottom: 1px solid #888;
+   padding: 15px 5px;
+}
+.gwt-NavItem-todo
+{
+   border-right: none;
+   border-bottom: 1px solid #888;
+   background-color: #ccf;
+   border-left: 8px solid #006699;
+   padding: 15px 5px;
+}
+
+.gwt-navContainer {
+	border-top: 1px solid #888;
+	background-color: #ddd;
+	margin: 8px 0;
+	width: 40em;
+}
+
+.gwt-mainContainer {
+		padding: 2em;
+		background-color: #fff;
+		border-right: 5px solid #888;
+		border-bottom: 5px solid #888;
+		border: 1px solid #888;
+}
+
+#main {
+	background-color: #f2f2f2;
+	padding: 20px 10px;
+	overflow: auto;
+}
+
+
+/** Most GWT widgets already have a style name defined */
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
