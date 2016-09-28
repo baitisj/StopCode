@@ -58,7 +58,7 @@ public class NaloxoneTutor implements EntryPoint {
 	
 	public static void next() {
 		++selected;
-		if (selected > txt.length) selected = txt.length;
+		if (selected >= txt.length) selected = txt.length;
 		select(selected);
 	}
 	
@@ -113,7 +113,6 @@ public class NaloxoneTutor implements EntryPoint {
 				@Override
 				public void onClick(ClickEvent event) {
 					NaloxoneTutor.select(((NavItem)event.getSource()).getIdx());
-					
 				}
 			});
 			nav.add(b);
