@@ -55,21 +55,29 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 	private FlowPanel nav = new FlowPanel();
 	
 	private void select(int idx) {
-		// Change state of navigation panel
-		for (int i=0; i < idx; ++i) {
-			nav.getWidget(i).setStyleName("gwt-NavItem-done");
+		Widget wid;
+		for (int i=0; i<8; ++i)
+		{
+			wid = nav.getWidget(i);
+			wid.removeStyleDependentName("done");
+			wid.removeStyleDependentName("active");
+			wid.removeStyleDependentName("todo");
+			if (i < idx) {
+				wid.addStyleDependentName("done");
+			}
+			
+			if (i==idx) {
+				wid.addStyleDependentName("active");
+				ui.ensureVisible(wid);
+			}
+			if (i>idx) {
+				wid.addStyleDependentName("todo");
+			}
 		}
-		
-		Widget wid = nav.getWidget(idx);
-		wid.setStyleName("gwt-NavItem-active");
-		ui.ensureVisible(wid);
-		
-		for (int i=idx+1; i < 8; ++i) {
-			nav.getWidget(i).setStyleName("gwt-NavItem-todo");
-		}
-		
+
 		// Update main window
 		HTML w = new HTML(txt[idx]);
+		w.setStyleName("mainItem");
 		ui.setMain(w);
 	}
 

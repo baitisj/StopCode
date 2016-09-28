@@ -11,16 +11,16 @@
 	</ui:style>
 	
 	<g:DockLayoutPanel unit='PCT' styleName="gwt-DockPanel">
-		<g:north size='5'>
+		<g:north size='1'>
 			<g:FlowPanel ui:field="N"/>
 		</g:north>
-		<g:west size='20'>
+		<g:west size='10'>
 			<g:ScrollPanel ui:field="W" styleName="gwt-navContainer"/>
 		</g:west>
-		<g:center size='80'>
+		<g:center size='90'>
 			<g:FlowPanel ui:field="M" styleName="gwt-mainContainer"/>
 		</g:center>
-		<g:south size='5'>
+		<g:south size='1'>
 			<g:FlowPanel ui:field="S"/>
 		</g:south>
 	</g:DockLayoutPanel>

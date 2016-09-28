@@ -10,6 +10,7 @@ public class NavItem extends Label {
 		super("Step " + (v + 1));
 		idx = v;
 		this.getElement().getStyle().setDisplay(Display.BLOCK);
+		this.setStylePrimaryName("gwt-NavItem");
 	}
 	
 	public int getIdx() {

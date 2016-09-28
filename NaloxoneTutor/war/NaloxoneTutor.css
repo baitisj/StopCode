@@ -1,58 +1,62 @@
 /** Add css rules here for your application. */
 
+/* Margin: top, right, bottom, left */
+/* Viewport: vw, vh, vmin, vmax */
 
-.gwt-NavItem-done
-{
-   text-decoration: none;
-   color: #666;
-   display: block;
-   padding: 15px 5px;
-   border-left: 8px solid #666;
-   border-right: 1px solid #666;
-   border-radius: 5px 0px 0px 5px;
-   border-bottom: 1px solid #888;
+.gwt-mainContainer {
+	padding: 2%;
+	margin-right: 5%;
+	background-color: #fff;
+	border: 1px solid #888;
+	border-left: none;
+	border-radius: 5px;
+	box-shadow: -5px 5px 5px #666;
+	z-index: 6;
+	position: sticky;
 }
-.gwt-NavItem-active
-{
-   border-right: 2px solid #fff;
-   background-color: #fff;
-   border-left: 8px solid #f00;
-   border-radius: 5px 0px 0px 5px;
-   border-bottom: 1px solid #888;
-   box-shadow: -5px 5px 5px #666;
-   padding: 15px 5px;
-   z-index: 10;
-   position: sticky;
-}
-.gwt-NavItem-todo
-{
-   border-right: 1px solid #888;
-   border-bottom: 1px solid #888;
-   background-color: #ccf;
-   border-left: 8px solid #006699;
-   border-radius: 5px 0px 0px 5px;
-   padding: 15px 5px;
+
+.gwt-mainItem {
+	padding: 1% 1%;
 }
 
 .gwt-navContainer {
 	border-top: 1px solid #888;
 	border-radius: 5px 0px 0px 5px;
-	margin: 15% 0% 15% 0%;
+	margin: 20% 0% 15% 1%;
 	vertical-align: middle;
+	overflow-x: hidden;
+}
+
+.gwt-NavItem {
+	font-size: 4vh;
+	color: #666;
+	text-decoration: none;
+	display: block;
+	border-right: 1px solid #666;
+	border-radius: 5px 0px 0px 5px;
+	border-bottom: 1px solid #888;
+	padding: 1% 1%;
+	overflow-x: hidden;
 	overflow-y: hidden;
 }
 
-.gwt-mainContainer {
-		padding: 2%;
-		background-color: #fff;
-		border: 1px solid #888;
-		border-left: none;
-		border-radius: 5px;
-		box-shadow: -5px 5px 5px #666;
-		margin-right: 5%;
-		margin-bottom: 10px;
-		position: sticky;
-		z-index: 6;
+.gwt-NavItem-done {
+   border-left: 8px solid #666;
+}
+
+.gwt-NavItem-active {
+   border-right: 2px solid #fff;
+   background-color: #fff;
+   border-left: 8px solid #f00;
+   box-shadow: -5px 5px 5px #666;
+   z-index: 10;
+   position: sticky;
+}
+
+.gwt-NavItem-todo
+{
+   background-color: #ccf;
+   border-left: 8px solid #006699;
 }
 
 .gwt-DockPanel {
@@ -68,4 +72,16 @@
 
 @-ms-viewport{
   width: device-width;
+}
+
+/** Use viewport width and height to define font size **/
+
+h1 {
+	font-size: 8vmin;
+}
+h2 {
+	font-size: 6vmin;
+}
+p, ul, ol {
+	font-size: 5vmin;
 }
