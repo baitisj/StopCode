@@ -31,6 +31,15 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 	@UiField
 	ScrollPanel W;
 	
+	@UiField
+	FlowPanel S;
+	
+	@UiField
+	Button prev;
+	
+	@UiField
+	Button next;
+	
 	public void setMain(Widget w) {
 		M.clear();
 		M.add(w);

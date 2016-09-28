@@ -99,6 +99,7 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 		ui.setNav(nav);
 	    select(0);
 	}
+	
 	public void onClick(ClickEvent event) {
 		NavItem currentItem = (NavItem)(event.getSource());
 		select(currentItem.getIdx());

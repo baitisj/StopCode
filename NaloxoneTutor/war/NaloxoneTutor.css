@@ -5,7 +5,6 @@
 
 .gwt-mainContainer {
 	background-color: #fff;
-	/*border: 1px solid #888; */
 	border-radius: 2vmin;
 	margin-right: 2%;
 	margin-top: 10px;
@@ -68,6 +67,21 @@
 .gwt-DockPanel {
 	background-color: #ddd;
 	vertical-align: middle;
+}
+
+.gwt-buttonContainer {
+	text-align: center;
+	/* 15% left margin = space for nav bar */
+	margin: 0 0 0 15%;
+	position: absolute;
+	padding: 1% 1% 1% 1%;
+}
+
+.gwt-button {
+	font-size: 5vmin;
+	margin: 0% 15% 0% 1%;
+	padding: 0;
+	height: 8vmin;
 }
 
 /** Most GWT widgets already have a style name defined */
