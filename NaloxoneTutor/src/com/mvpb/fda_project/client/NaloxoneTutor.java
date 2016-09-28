@@ -56,7 +56,9 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 	
 	private void select(int idx) {
 		Widget wid;
-		for (int i=0; i<8; ++i)
+		wid = nav.getWidget(0);
+		wid.addStyleDependentName("first");
+		for (int i=0; i<txt.length; ++i)
 		{
 			wid = nav.getWidget(i);
 			wid.removeStyleDependentName("done");
@@ -77,7 +79,7 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 
 		// Update main window
 		HTML w = new HTML(txt[idx]);
-		w.setStyleName("mainItem");
+		w.setStyleName("gwt-mainItem");
 		ui.setMain(w);
 	}
 
@@ -89,7 +91,7 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 		RootLayoutPanel rp = RootLayoutPanel.get();
 		rp.add(ui);
 
-		for (int i=0; i<8; ++i) {
+		for (int i=0; i<txt.length; ++i) {
 			NavItem b = new NavItem(i);
 			b.addClickHandler(this);
 			nav.add(b);

@@ -18,7 +18,7 @@
 			<g:ScrollPanel ui:field="W" styleName="gwt-navContainer"/>
 		</g:west>
 		<g:center size='90'>
-			<g:FlowPanel ui:field="M" styleName="gwt-mainContainer"/>
+			<g:ScrollPanel ui:field="M" styleName="gwt-mainContainer"/>
 		</g:center>
 		<g:south size='1'>
 			<g:FlowPanel ui:field="S"/>

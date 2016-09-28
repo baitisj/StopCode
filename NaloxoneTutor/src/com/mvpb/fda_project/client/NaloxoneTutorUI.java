@@ -26,7 +26,7 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 	}
 
 	@UiField
-	FlowPanel M;
+	ScrollPanel M;
 	
 	@UiField
 	ScrollPanel W;
