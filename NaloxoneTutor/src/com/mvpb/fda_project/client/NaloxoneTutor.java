@@ -31,7 +31,7 @@ import com.google.gwt.user.client.ui.Widget;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class NaloxoneTutor implements EntryPoint, ClickHandler {
+public class NaloxoneTutor implements EntryPoint {
 	/**
 	 * The message displayed to the user when the server cannot be reached or
 	 * returns an error.
@@ -50,11 +50,25 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 			Rsrc.INSTANCE.s08().getText()
 		};
 	
-	private NaloxoneTutorUI ui = new NaloxoneTutorUI();
+	private static NaloxoneTutorUI ui = new NaloxoneTutorUI();
 	
-	private FlowPanel nav = new FlowPanel();
+	private static FlowPanel nav = new FlowPanel();
 	
-	private void select(int idx) {
+	private static int selected = 0;
+	
+	public static void next() {
+		++selected;
+		if (selected > txt.length) selected = txt.length;
+		select(selected);
+	}
+	
+	public static void prev() {
+		--selected;
+		if (selected < 0) selected = 0;
+		select(selected);
+	}
+	
+	private static void select(int idx) {
 		Widget wid;
 		wid = nav.getWidget(0);
 		wid.addStyleDependentName("first");
@@ -81,6 +95,7 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 		HTML w = new HTML(txt[idx]);
 		w.setStyleName("gwt-mainItem");
 		ui.setMain(w);
+		selected = idx;
 	}
 
 	/**
@@ -93,15 +108,17 @@ public class NaloxoneTutor implements EntryPoint, ClickHandler {
 
 		for (int i=0; i<txt.length; ++i) {
 			NavItem b = new NavItem(i);
-			b.addClickHandler(this);
+			b.addClickHandler(new ClickHandler() {
+				
+				@Override
+				public void onClick(ClickEvent event) {
+					NaloxoneTutor.select(((NavItem)event.getSource()).getIdx());
+					
+				}
+			});
 			nav.add(b);
 		}
 		ui.setNav(nav);
 	    select(0);
-	}
-	
-	public void onClick(ClickEvent event) {
-		NavItem currentItem = (NavItem)(event.getSource());
-		select(currentItem.getIdx());
 	}
 }
