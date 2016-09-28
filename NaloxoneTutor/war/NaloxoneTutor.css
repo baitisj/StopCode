@@ -19,8 +19,8 @@
 }
 
 .gwt-navContainer {
-	border-radius: 5px 0px 0px 5px;
-	margin: 20% 0% 15% 0%;
+	border-radius: 1vmin 0px 0px 1vmin;
+	margin: 25px 0% 15% 0%;
 	vertical-align: middle;
 	overflow-x: hidden;
 }
