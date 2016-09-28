@@ -14,10 +14,10 @@
 		<g:north size='1'>
 			<g:FlowPanel ui:field="N"/>
 		</g:north>
-		<g:west size='10'>
+		<g:west size='15'>
 			<g:ScrollPanel ui:field="W" styleName="gwt-navContainer"/>
 		</g:west>
-		<g:center size='90'>
+		<g:center size='85'>
 			<g:ScrollPanel ui:field="M" styleName="gwt-mainContainer"/>
 		</g:center>
 		<g:south size='1'>
