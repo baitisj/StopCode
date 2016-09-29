@@ -39,6 +39,14 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 				NaloxoneTutor.next();
 			}
 		});
+		
+		audio.addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				NaloxoneTutor.toggleDictation();
+			}
+		});
 	}
 
 	@UiField
@@ -55,6 +63,9 @@ public class NaloxoneTutorUI extends Composite implements HasText {
 	
 	@UiField
 	Button next;
+	
+	@UiField
+	public static Button audio;
 	
 	public void setMain(Widget w) {
 		M.clear();

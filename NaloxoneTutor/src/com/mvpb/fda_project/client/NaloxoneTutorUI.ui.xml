@@ -22,11 +22,9 @@
 		</g:center>
 		<g:south size='10'>
 			<g:FlowPanel ui:field="S" styleName="gwt-buttonContainer">
-
               <g:Button styleName="gwt-button" text="Prev" ui:field="prev"></g:Button> 
-
               <g:Button styleName="gwt-button" text="Next" ui:field="next"></g:Button> 
-
+              <g:Button styleName="gwt-button" text="Disable Audio" ui:field="audio"></g:Button> 
 			</g:FlowPanel>
 		</g:south>
 	</g:DockLayoutPanel>

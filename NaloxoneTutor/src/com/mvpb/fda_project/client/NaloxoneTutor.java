@@ -71,9 +71,20 @@ public class NaloxoneTutor implements EntryPoint {
 		select(selected);
 	}
 	
+	public static void toggleDictation() {
+		if (dictation != null) {
+			dictation.pause();
+			dictation = null;
+			NaloxoneTutorUI.audio.setHTML("Enable Audio");
+		} else {
+			dictation = Audio.createIfSupported();
+			select(selected);
+			NaloxoneTutorUI.audio.setHTML("Disable Audio");
+		}
+	}
+	
 	private static void select(int idx) {
 		Widget wid;
-		dictation.setSrc("audio/0" + (idx+1) + ".mp3");
 		wid = nav.getWidget(0);
 		wid.addStyleDependentName("first");
 		for (int i=0; i<txt.length; ++i)
@@ -101,7 +112,10 @@ public class NaloxoneTutor implements EntryPoint {
 		ui.setMain(w);
 		selected = idx;
 		// Play audio
-		dictation.play();
+		if (dictation != null) {
+			dictation.setSrc("audio/0" + (idx+1) + ".mp3");
+			dictation.play();
+		}
 	}
 
 	/**
