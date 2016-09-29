@@ -9,6 +9,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.media.client.Audio;
 import com.google.gwt.resources.client.TextResource;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
@@ -56,6 +57,8 @@ public class NaloxoneTutor implements EntryPoint {
 	
 	private static int selected = 0;
 	
+	private static Audio dictation;
+	
 	public static void next() {
 		++selected;
 		if (selected >= txt.length) selected = txt.length-1;
@@ -70,6 +73,7 @@ public class NaloxoneTutor implements EntryPoint {
 	
 	private static void select(int idx) {
 		Widget wid;
+		dictation.setSrc("audio/0" + (idx+1) + ".mp3");
 		wid = nav.getWidget(0);
 		wid.addStyleDependentName("first");
 		for (int i=0; i<txt.length; ++i)
@@ -96,6 +100,8 @@ public class NaloxoneTutor implements EntryPoint {
 		w.setStyleName("gwt-mainItem");
 		ui.setMain(w);
 		selected = idx;
+		// Play audio
+		dictation.play();
 	}
 
 	/**
@@ -105,6 +111,8 @@ public class NaloxoneTutor implements EntryPoint {
 		Window.enableScrolling(false);
 		RootLayoutPanel rp = RootLayoutPanel.get();
 		rp.add(ui);
+		
+		dictation = Audio.createIfSupported();
 
 		for (int i=0; i<txt.length; ++i) {
 			NavItem b = new NavItem(i);
@@ -112,7 +120,8 @@ public class NaloxoneTutor implements EntryPoint {
 				
 				@Override
 				public void onClick(ClickEvent event) {
-					NaloxoneTutor.select(((NavItem)event.getSource()).getIdx());
+					int idx = ((NavItem)event.getSource()).getIdx();
+					NaloxoneTutor.select(idx);
 				}
 			});
 			nav.add(b);
