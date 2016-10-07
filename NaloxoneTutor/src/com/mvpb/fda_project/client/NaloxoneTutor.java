@@ -75,11 +75,11 @@ public class NaloxoneTutor implements EntryPoint {
 		if (dictation != null) {
 			dictation.pause();
 			dictation = null;
-			NaloxoneTutorUI.audio.setHTML("Enable Audio");
+			NaloxoneTutorUI.audio.setHTML("&#x1F507;");
 		} else {
 			dictation = Audio.createIfSupported();
 			select(selected);
-			NaloxoneTutorUI.audio.setHTML("Disable Audio");
+			NaloxoneTutorUI.audio.setHTML("&#x1F50A;");
 		}
 	}
 	
