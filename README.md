@@ -1,6 +1,6 @@
 # StopCode
 FDA Naloxone Challenge, team StopCode
-![](https://cdn.rawgit.com/baitisj/StopCode/master/images/naloxone.svg | width=200px)
+![](https://cdn.rawgit.com/baitisj/StopCode/master/images/naloxone.svg =250x250)
 
 To build this project:
 
