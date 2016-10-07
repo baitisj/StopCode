@@ -1,4 +1,4 @@
-# StopCode <img src="https://cdn.rawgit.com/baitisj/StopCode/master/images/naloxone.svg" alt="NaloxoneMan" width="150" height="150" float="right"/>
+# <img src="https://cdn.rawgit.com/baitisj/StopCode/master/images/naloxone.svg" alt="NaloxoneMan" width="100" height="100" float="left"/> StopCode 
 FDA Naloxone Challenge, team StopCode
 
 
