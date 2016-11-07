@@ -42,4 +42,6 @@ By adopting a quasi-centralized distribution network that contains businesses wh
 
 *Carla Graichen, MD* - California native with degrees in both film production and psychology. Six years working in Los Angeles as an assistant director.  She returned to study medicine in 2012 in Oregon with extensive work in addiction care.  At the University of Washington in 2016, she has become a suboxone provider and an advocate for increased addiction medical care.
 
-*Michael von Plato, MS4* - California native with a Bachelor’s degree in mathematics who returned to study medicine in 2013 at Boston University.Jason C. Thane - Montana native with 20+ years of entrepreneurial leadership, software engineering. Co-Founder, General UI (Software company)
+*Michael von Plato, MS4* - California native with a Bachelor’s degree in mathematics who returned to study medicine in 2013 at Boston University.
+
+*Jason C. Thane* - Montana native with 20+ years of entrepreneurial leadership, software engineering. Co-Founder, General UI (Software company)
